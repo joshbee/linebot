@@ -9,7 +9,7 @@ var bot = linebot({
 
 
 
-var msgAry = ['哈什麼哈','笑屁喔','不好笑ㄟ~','哈哈哈哈哈哈','怎麼這麼好笑啦'];
+var msgAry = ['哈什麼哈','笑屁喔','不好笑ㄟ~','哈哈哈哈哈哈','怎麼這麼好笑啦','北七ㄟ','太有趣了','喔~'];
 
 
 
@@ -31,7 +31,7 @@ bot.on('message', function(event) {
     var msg = event.message.text;
 
 		if (msg.indexOf('哈') != -1) {
-			var _num = Math.floor((Math.random() * 5));
+			var _num = Math.floor((Math.random() * 8));
 	    event.reply(msgAry[_num]).then(function(data) {
 	      // success 
 	      console.log(msg);
