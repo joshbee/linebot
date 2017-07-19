@@ -31,7 +31,7 @@ bot.on('message', function(event) {
     var msg = event.message.text;
 
 		if (msg.indexOf('哈') != -1) {
-			var _num = Math.floor((Math.random() * 10));
+			var _num = Math.floor((Math.random() * 5));
 	    event.reply(msgAry[_num]).then(function(data) {
 	      // success 
 	      console.log(msg);
