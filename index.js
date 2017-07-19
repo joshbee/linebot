@@ -42,6 +42,8 @@ bot.on('message', function(event) {
 
 		}
 
+		bot.push('6411335495560','雷神索爾沒有斧頭啦~');
+
   }
 
 });
