@@ -42,7 +42,7 @@ bot.on('message', function(event) {
 
 		}
 
-		bot.push('U36ceb0a10950abb83744189e28a32e49','雷神索爾沒有斧頭啦~');
+		// bot.push('U36ceb0a10950abb83744189e28a32e49','雷神索爾沒有斧頭啦~');
 
   }
 
