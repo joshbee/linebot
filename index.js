@@ -14,7 +14,7 @@ var msgAry = ['哈什麼哈','笑屁喔','不好笑ㄟ~','哈哈哈哈哈哈','�
 
 
 bot.on('message', function(event) {
-  // console.log(event); //把收到訊息的 event 印出來看看
+  console.log(event); //把收到訊息的 event 印出來看看
 
   // if (event.message.type = 'text') {
   //   var msg = event.message.text;
