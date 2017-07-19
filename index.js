@@ -8,19 +8,45 @@ var bot = linebot({
 });
 
 
+
+
+
+
+
 bot.on('message', function(event) {
-  console.log(event); //把收到訊息的 event 印出來看看
+  // console.log(event); //把收到訊息的 event 印出來看看
+
+  // if (event.message.type = 'text') {
+  //   var msg = event.message.text;
+  //   event.reply(msg).then(function(data) {
+  //     // success 
+  //     console.log(msg);
+  //   }).catch(function(error) {
+  //     // error 
+  //     console.log('error');
+  //   });
+  // }
+
   if (event.message.type = 'text') {
     var msg = event.message.text;
-    event.reply(msg).then(function(data) {
-      // success 
-      console.log(msg);
-    }).catch(function(error) {
-      // error 
-      console.log('error');
-    });
+
+		if (msg.indexOf('哈') != -1) {
+	    event.reply('哈什麼哈').then(function(data) {
+	      // success 
+	      console.log(msg);
+	    }).catch(function(error) {
+	      // error 
+	      console.log('error');
+	    });
+
+		}
+
   }
+
 });
+
+
+
 
 const app = express();
 const linebotParser = bot.parser();
