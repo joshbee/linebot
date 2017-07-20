@@ -93,7 +93,10 @@ bot.on('message', function(event) {
 
 		}else if (msg.indexOf('時間') != -1 || msg.indexOf('幾點') != -1) {
 			var now = new Date();
-			var hours = now.getHours();
+			var hours = now.getHours() + 8;
+			if(hours >= 24){
+				hours = hours - 24;
+			}
 			var minutes = now.getMinutes();
 			event.reply({ type: 'text', text: '現在是 '+hours+':'+minutes});
 
