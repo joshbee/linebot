@@ -9,7 +9,10 @@ var bot = linebot({
 
 
 
-var msgAry = ['哈什麼哈','笑屁喔','不好笑ㄟ~','哈哈哈哈哈哈哈哈','怎麼這麼好笑啦','北七ㄟ','太有趣了','喔~'];
+var msgAry1 = ['哈什麼哈','笑屁喔','不好笑ㄟ~','哈哈哈哈哈哈哈哈','怎麼這麼好笑啦','北七ㄟ','太有趣了','喔~','圖'];
+var msgAry2 = ['有事嗎?','找我幹嘛?','有什麼可以為你服務的嗎?','什麼事啦~ 煩~','圖','叫屁喔~'];
+var msgAry3 = ['我怎麼會知道啦~','自己上網查啊','什麼啦~'];
+var msgAry4 = ['嗯嗯','我也覺得','對個屁！'];
 
 
 
@@ -19,11 +22,19 @@ bot.on('message', function(event) {
   if (event.message.type == 'text') {
     var msg = event.message.text;
 
-		if (msg.indexOf('哈') != -1) {
-				var num = msgAry.length;
-				var ram = Math.floor((Math.random() * num));
-				event.reply({ type: 'text', text: msgAry[ram] });
-
+		if (msg.indexOf('哈') != -1 || msg.indexOf('呵') != -1) {
+			var num = msgAry1.length;
+			var ram = Math.floor((Math.random() * num));
+			if(ram == 8){
+				event.reply({
+					type: 'image',
+					originalContentUrl: 'http://pic.qbaobei.com/Uploads/Editor/2017-02-15/58a413f547357_375_0.jpg',
+					previewImageUrl: 'http://pic.qbaobei.com/Uploads/Editor/2017-02-15/58a413f547357_375_0.jpg'
+				});
+			}else{
+				event.reply({ type: 'text', text: msgAry1[ram] });
+			}
+				
 		}else if (msg.indexOf('XD') != -1) {
 				event.reply({ type: 'text', text: msg });
 				
@@ -33,14 +44,77 @@ bot.on('message', function(event) {
 		}else if (msg == '早安' || msg == '早') {
 			event.reply({ type: 'text', text: '早啊！' });
 
-		}else if (msg.indexOf('吵') != -1 || msg.indexOf('閕嘴') != -1) {
+		}else if (msg.indexOf('吵') != -1 || msg.indexOf('閉嘴') != -1) {
 			event.reply({
 				type: 'image',
 				originalContentUrl: 'https://i2.kknews.cc/large/15a500031adfe76853d9',
 				previewImageUrl: 'https://i2.kknews.cc/large/15a500031adfe76853d9'
 			});
 			
+		}else if (msg.indexOf('棒') != -1 || msg.indexOf('讚') != -1) {
+			event.reply({
+				type: 'image',
+				originalContentUrl: 'https://i2.kknews.cc/large/15a500031ad204692d1c',
+				previewImageUrl: 'https://i2.kknews.cc/large/15a500031ad204692d1c'
+			});
+				
+		}else if (msg.indexOf('笨蛋') != -1 || msg.indexOf('白痴') != -1) {
+			event.reply({
+				type: 'image',
+				originalContentUrl: 'https://tc.sinaimg.cn/maxwidth.2048/tc.service.weibo.com/img_mp_itc_cn/d868f28ea71ec94eb9e10f2c7d173765.jpeg',
+				previewImageUrl: 'https://tc.sinaimg.cn/maxwidth.2048/tc.service.weibo.com/img_mp_itc_cn/d868f28ea71ec94eb9e10f2c7d173765.jpeg'
+			});
+				
+		}else if (msg == '幹') {
+			event.reply({
+				type: 'image',
+				originalContentUrl: 'https://i1.kknews.cc/large/163500026d5d353c21a6',
+				previewImageUrl: 'https://i1.kknews.cc/large/163500026d5d353c21a6'
+			});
+
+		}else if (msg.indexOf('Bee') != -1 || msg.indexOf('bee') != -1 || msg.indexOf('機器人') != -1 || msg.indexOf('hi') != -1 || msg.indexOf('嗨') != -1 || msg.indexOf('hello') != -1 || msg.indexOf('Hello') != -1 || msg.indexOf('喂') != -1) {
+			var num = msgAry2.length;
+			var ram = Math.floor((Math.random() * num));
+			if(ram == 4){
+				event.reply({
+					type: 'image',
+					originalContentUrl: 'https://i1.kknews.cc/large/159d0002fd20e3da8b30',
+					previewImageUrl: 'https://i1.kknews.cc/large/159d0002fd20e3da8b30'
+				});
+			}else{
+				event.reply({ type: 'text', text: msgAry2[ram] });
+			}
+
+		}else if (msg.indexOf('什麼') != -1 || msg.indexOf('多少') != -1) {
+			var num = msgAry3.length;
+			var ram = Math.floor((Math.random() * num));
+			event.reply({ type: 'text', text: msgAry3[ram] });
+
+		}else if (msg.indexOf('想睡') != -1) {
+			event.reply({ type: 'text', text: '我也好想睡' });
+
+		}else if (msg.indexOf('餓') != -1) {
+			event.reply({ type: 'text', text: '我也覺得餓~ XD' });
+
+		}else if (msg.indexOf('煩') != -1) {
+			event.reply({
+				type: 'image',
+				originalContentUrl: 'https://i2.kknews.cc/large/163300041050371df2ac',
+				previewImageUrl: 'https://i2.kknews.cc/large/163300041050371df2ac'
+			});
+
+		}else if (msg.indexOf('可愛') != -1) {
+			event.reply({ type: 'text', text: '嗯~ 還不錯' });
+
+		}else if (msg.indexOf('對') != -1) {
+			var num = msgAry4.length;
+			var ram = Math.floor((Math.random() * num));
+			event.reply({ type: 'text', text: msgAry4[ram] });
+
 		}
+
+
+
 
 
 
