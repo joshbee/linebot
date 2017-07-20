@@ -184,7 +184,8 @@ bot.on('message', function(event) {
 					packageId: '1',
 					stickerId: '408'
 				}]);
-			bot.leaveGroup('C0b2204aaa40ce799cbe70ed842749f2d');
+			// bot.leaveGroup('C0b2204aaa40ce799cbe70ed842749f2d');
+			bot.leaveGroup('C119618b54b902cb70925e994e317670c');
 
 		}
 
