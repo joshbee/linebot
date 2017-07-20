@@ -33,7 +33,7 @@ bot.on('message', function(event) {
 		}else if (msg == '早安' || msg == '早') {
 			event.reply({ type: 'text', text: '早啊！' });
 
-		}else if (msg == '吵' || msg == '閕嘴') {
+		}else if (msg.indexOf('吵') != -1 || msg.indexOf('閕嘴') != -1) {
 			event.reply({
 				type: 'image',
 				originalContentUrl: 'https://i2.kknews.cc/large/15a500031adfe76853d9',
