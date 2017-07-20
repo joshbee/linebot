@@ -24,7 +24,8 @@ bot.on('message', function(event) {
 
 		if (msg.indexOf('哈') != -1 || msg.indexOf('呵') != -1) {
 			var num = msgAry1.length;
-			var ram = Math.floor((Math.random() * num));
+			// var ram = Math.floor((Math.random() * num));
+			var ram = 8;
 			if(ram == 8){
 				event.reply({
 					type: 'image',
