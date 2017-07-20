@@ -19,6 +19,9 @@ var msgAry7 = ['他是誰?','他?','他怎麼了?'];
 var msgAry8 = ['中午要吃Dr. Wu嗎?','這是雷神索爾的斧頭'];
 var msgAry9 = ['我不知道ㄟ','你說什麼我聽不懂~','什麼東西','隨便','大概吧','有可能喔'];
 
+var stickPack = ['1','2'];
+var stickID = [['3','5','16','21','135','139','405','428'],['18','24','149','170','177','179','502','520']];
+
 
 
 
@@ -171,12 +174,15 @@ bot.on('message', function(event) {
 
 
 
-
   }else if (event.message.type == 'sticker') {
+  	var num = stickPack.length;
+  	var ram = Math.floor((Math.random() * num));
+  	var ram2 = Math.floor((Math.random() * 8));
+
 		event.reply({
 			type: 'sticker',
-			packageId: '1',
-			stickerId: '405'
+			packageId: stickPack[ram],
+			stickerId: stickID[ram][ram2]
 		});
 
 	}
