@@ -141,6 +141,7 @@ bot.on('message', function(event) {
 		}else if (msg.indexOf('我是誰') != -1) {
 			bot.getUserProfile(event.source.userId).then(function (data) {
 				event.reply('你是' + data);
+				console.log(data);
 			}).catch(function (error) {
 				// error 
 			});
