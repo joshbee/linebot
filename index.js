@@ -29,8 +29,8 @@ bot.on('message', function(event) {
 			if(ram == 8){
 				event.reply({
 					type: 'image',
-					originalContentUrl: 'http://pic.qbaobei.com/Uploads/Editor/2017-02-15/58a413f547357_375_0.jpg',
-					previewImageUrl: 'http://pic.qbaobei.com/Uploads/Editor/2017-02-15/58a413f547357_375_0.jpg'
+					originalContentUrl: 'https://www.ashlieworks.com/test/josh/linebot/58a413f547357_375_0.jpg',
+					previewImageUrl: 'https://www.ashlieworks.com/test/josh/linebot/58a413f547357_375_0.jpg'
 				});
 			}else{
 				event.reply({ type: 'text', text: msgAry1[ram] });
