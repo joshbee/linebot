@@ -66,20 +66,20 @@ bot.on('message', function(event) {
 
 
 
-	if (event.message.type = 'sticker') {
-		event.reply({
-			type: 'sticker',
-			packageId: '1',
-			stickerId: '13'
-		}).then(function(data) {
-			// success 
-			console.log(msg);
-		}).catch(function(error) {
-			// error 
-			console.log('error');
-		});
+	// if (event.message.type = 'sticker') {
+	// 	event.reply({
+	// 		type: 'sticker',
+	// 		packageId: '1',
+	// 		stickerId: '13'
+	// 	}).then(function(data) {
+	// 		// success 
+	// 		console.log(msg);
+	// 	}).catch(function(error) {
+	// 		// error 
+	// 		console.log('error');
+	// 	});
 
-	}//sticker
+	// }//sticker
 
 
 
