@@ -48,29 +48,29 @@ bot.on('message', function(event) {
 		}else if (msg.indexOf('吵') != -1 || msg.indexOf('閉嘴') != -1) {
 			event.reply({
 				type: 'image',
-				originalContentUrl: 'https://i2.kknews.cc/large/15a500031adfe76853d9',
-				previewImageUrl: 'https://i2.kknews.cc/large/15a500031adfe76853d9'
+				originalContentUrl: 'https://www.ashlieworks.com/test/josh/linebot/15a500031adfe76853d9.jpg',
+				previewImageUrl: 'https://www.ashlieworks.com/test/josh/linebot/15a500031adfe76853d9.jpg'
 			});
 			
 		}else if (msg.indexOf('棒') != -1 || msg.indexOf('讚') != -1) {
 			event.reply({
 				type: 'image',
-				originalContentUrl: 'https://i2.kknews.cc/large/15a500031ad204692d1c',
-				previewImageUrl: 'https://i2.kknews.cc/large/15a500031ad204692d1c'
+				originalContentUrl: 'https://www.ashlieworks.com/test/josh/linebot/15a500031ad204692d1c.jpg',
+				previewImageUrl: 'https://www.ashlieworks.com/test/josh/linebot/15a500031ad204692d1c.jpg'
 			});
 				
 		}else if (msg.indexOf('笨蛋') != -1 || msg.indexOf('白痴') != -1) {
 			event.reply({
 				type: 'image',
-				originalContentUrl: 'https://tc.sinaimg.cn/maxwidth.2048/tc.service.weibo.com/img_mp_itc_cn/d868f28ea71ec94eb9e10f2c7d173765.jpeg',
-				previewImageUrl: 'https://tc.sinaimg.cn/maxwidth.2048/tc.service.weibo.com/img_mp_itc_cn/d868f28ea71ec94eb9e10f2c7d173765.jpeg'
+				originalContentUrl: 'https://www.ashlieworks.com/test/josh/linebot/d868f28ea71ec94eb9e10f2c7d173765.jpg',
+				previewImageUrl: 'https://www.ashlieworks.com/test/josh/linebot/d868f28ea71ec94eb9e10f2c7d173765.jpg'
 			});
 				
 		}else if (msg == '幹') {
 			event.reply({
 				type: 'image',
-				originalContentUrl: 'https://i1.kknews.cc/large/163500026d5d353c21a6',
-				previewImageUrl: 'https://i1.kknews.cc/large/163500026d5d353c21a6'
+				originalContentUrl: 'https://www.ashlieworks.com/test/josh/linebot/163500026d5d353c21a6.jpg',
+				previewImageUrl: 'https://www.ashlieworks.com/test/josh/linebot/163500026d5d353c21a6.jpg'
 			});
 
 		}else if (msg.indexOf('Bee') != -1 || msg.indexOf('bee') != -1 || msg.indexOf('機器人') != -1 || msg.indexOf('hi') != -1 || msg.indexOf('嗨') != -1 || msg.indexOf('hello') != -1 || msg.indexOf('Hello') != -1 || msg.indexOf('喂') != -1) {
@@ -79,8 +79,8 @@ bot.on('message', function(event) {
 			if(ram == 4){
 				event.reply({
 					type: 'image',
-					originalContentUrl: 'https://i1.kknews.cc/large/159d0002fd20e3da8b30',
-					previewImageUrl: 'https://i1.kknews.cc/large/159d0002fd20e3da8b30'
+					originalContentUrl: 'https://www.ashlieworks.com/test/josh/linebot/159d0002fd20e3da8b30.jpg',
+					previewImageUrl: 'https://www.ashlieworks.com/test/josh/linebot/159d0002fd20e3da8b30.jpg'
 				});
 			}else{
 				event.reply({ type: 'text', text: msgAry2[ram] });
@@ -100,8 +100,8 @@ bot.on('message', function(event) {
 		}else if (msg.indexOf('煩') != -1) {
 			event.reply({
 				type: 'image',
-				originalContentUrl: 'https://i2.kknews.cc/large/163300041050371df2ac',
-				previewImageUrl: 'https://i2.kknews.cc/large/163300041050371df2ac'
+				originalContentUrl: 'https://www.ashlieworks.com/test/josh/linebot/163300041050371df2ac.jpg',
+				previewImageUrl: 'https://www.ashlieworks.com/test/josh/linebot/163300041050371df2ac.jpg'
 			});
 
 		}else if (msg.indexOf('可愛') != -1) {
