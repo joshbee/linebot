@@ -29,7 +29,6 @@ bot.on('message', function(event) {
 
   if (event.message.type = 'text') {
     var msg = event.message.text;
-
 		if (msg.indexOf('哈') != -1) {
 			var _num = Math.floor((Math.random() * 8));
 	    event.reply(msgAry[_num]).then(function(data) {
@@ -39,12 +38,30 @@ bot.on('message', function(event) {
 	      // error 
 	      console.log('error');
 	    });
-
 		}
-
-		// bot.push('U36ceb0a10950abb83744189e28a32e49','雷神索爾沒有斧頭啦~');
-
   }
+
+
+  if (event.message.type = 'text') {
+    var msg = event.message.text;
+		if (msg == '早安' || msg == '早') {
+	    event.reply('早啊！').then(function(data) {
+	      // success 
+	      console.log(msg);
+	    }).catch(function(error) {
+	      // error 
+	      console.log('error');
+	    });
+		}
+  }
+
+
+
+
+
+
+
+
 
 });
 
