@@ -69,7 +69,7 @@ bot.on('message', function(event) {
 				previewImageUrl: 'https://www.ashlieworks.com/test/josh/linebot/163500026d5d353c21a6.jpg'
 			});
 
-		}else if (msg.indexOf('Bee') != -1 || msg.indexOf('bee') != -1 || msg.indexOf('機器人') != -1 || msg.indexOf('hi') != -1 || msg.indexOf('嗨') != -1 || msg.indexOf('hello') != -1 || msg.indexOf('Hello') != -1 || msg.indexOf('喂') != -1) {
+		}else if (msg.indexOf('Bee') != -1 || msg.indexOf('bee') != -1 || msg.indexOf('機器人') != -1 || msg.indexOf('hi') != -1 || msg.indexOf('嗨') != -1 || msg.indexOf('hello') != -1 || msg.indexOf('Hello') != -1 || msg.indexOf('喂') != -1 || msg.indexOf('安安') != -1) {
 			var num = msgAry2.length;
 			var ram = Math.floor((Math.random() * num));
 			if(ram == 4){
@@ -107,6 +107,9 @@ bot.on('message', function(event) {
 			var num = msgAry4.length;
 			var ram = Math.floor((Math.random() * num));
 			event.reply({ type: 'text', text: msgAry4[ram] });
+
+		}else if (msg.indexOf('怒') != -1 || msg.indexOf('生氣') != -1) {
+			event.reply({ type: 'text', text: '你再這樣我要森77囉~' });
 
 		}
 
