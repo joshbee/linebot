@@ -140,7 +140,7 @@ bot.on('message', function(event) {
 
 		}else if (msg.indexOf('我是誰') != -1) {
 			bot.getUserProfile(event.source.userId).then(function (profile) {
-				event.reply('你是' +event.source.userId+profile.displayName);
+				event.reply('你是' +profile.displayName);
 				console.log(profile);
 			}).catch(function (error) {
 				// error 
