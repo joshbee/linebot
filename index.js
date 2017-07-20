@@ -66,20 +66,6 @@ bot.on('message', function(event) {
 
 
 
-	if (event.message.type = 'sticker') {
-		event.reply([
-			{ type: 'text', text: '我都沒有貼圖' },
-			{ type: 'text', text: '我也想要~' }
-		]);
-
-	}//sticker
-
-
-
-
-
-
-
 
 });
 
