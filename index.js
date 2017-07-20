@@ -82,7 +82,7 @@ bot.on('message', function(event) {
 				event.reply({ type: 'text', text: msgAry2[ram] });
 			}
 
-		}else if (msg.indexOf('什麼') != -1 || msg.indexOf('多少') != -1) {
+		}else if (msg.indexOf('什麼') != -1 || msg.indexOf('多少') != -1 || msg.indexOf('如何') != -1 || msg.indexOf('幾') != -1) {
 			var num = msgAry3.length;
 			var ram = Math.floor((Math.random() * num));
 			event.reply({ type: 'text', text: msgAry3[ram] });
