@@ -150,7 +150,6 @@ bot.on('message', function(event) {
 				event.reply({ type: 'text', text: '各位大大 我要離開了' });
 			},3000);
 
-			event.reply({ type: 'text', text: '天啊~你講對了~' });
 			setTimeout(function(){
 				event.reply({ type: 'text', text: 'Bye Bye' });
 			},5000);
@@ -164,7 +163,7 @@ bot.on('message', function(event) {
 
 				linebot.leaveGroup('C0b2204aaa40ce799cbe70ed842749f2d');
 			},6000);
-			
+
 
 		}
 
