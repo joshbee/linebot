@@ -139,8 +139,8 @@ bot.on('message', function(event) {
 			event.reply({ type: 'text', text: '我偏不要 ㄌㄩㄝ..ㄌㄩㄝ..ㄌㄩㄝ' });
 
 		}else if (msg.indexOf('我是誰') != -1) {
-			bot.getUserProfile(event.source.userId).then(function (data) {
-				event.reply('你是' +event.source.userId+data.displayName);
+			event.source.profile().then(function (data) {
+				event.reply('你是' +data.displayName);
 				console.log(data);
 			}).catch(function (error) {
 				// error 
