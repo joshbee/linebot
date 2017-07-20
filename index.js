@@ -178,7 +178,7 @@ bot.on('message', function(event) {
 
 			event.reply([
 				{ type: 'text', text: '天啊~你講對了~' },
-				{ type: 'text', text: '各位大大 我要離開了' },
+				{ type: 'text', text: '帥到分手 我要離開了' },
 				{
 					type: 'sticker',
 					packageId: '1',
