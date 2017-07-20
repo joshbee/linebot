@@ -14,7 +14,7 @@ var msgAry2 = ['有事嗎?','找我幹嘛?','有什麼可以為你服務的嗎?'
 var msgAry3 = ['我怎麼會知道啦~','自己上網查啊','什麼啦~','我不會告訴你的','別問~你會怕'];
 var msgAry4 = ['嗯嗯','我也覺得','對個屁！'];
 var msgAry5 = ['你知道什麼水果最燙嗎?','你知道城市跟鄉下哪個地方的河流比較湍急嗎?'];
-var msgAry6 = ['不然勒~'];
+var msgAry6 = ['不然勒~','加油好嗎~'];
 var msgAry7 = ['他是誰?'];
 var msgAry8 = ['中午要吃Dr. Wu嗎?','這是雷神索爾的斧頭'];
 
@@ -40,7 +40,7 @@ bot.on('message', function(event) {
 				event.reply({ type: 'text', text: msgAry1[ram] });
 			}
 				
-		}else if (msg.indexOf('XD') != -1) {
+		}else if (msg.indexOf('XD') != -1 || msg.indexOf('拜拜') != -1 || msg.indexOf('bye') != -1 || msg.indexOf('再見') != -1) {
 				event.reply({ type: 'text', text: msg });
 				
 		}else if (msg == '早安' || msg == '早') {
