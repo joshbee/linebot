@@ -9,7 +9,7 @@ var bot = linebot({
 
 
 
-var msgAry = ['哈什麼哈','笑屁喔','不好笑ㄟ~','哈哈哈哈哈哈','怎麼這麼好笑啦','北七ㄟ','太有趣了','喔~'];
+var msgAry = ['哈什麼哈','笑屁喔','不好笑ㄟ~','哈哈哈哈哈哈哈哈','怎麼這麼好笑啦','北七ㄟ','太有趣了','喔~'];
 
 
 
@@ -29,6 +29,17 @@ bot.on('message', function(event) {
 				
 		}else if (msg == '早安' || msg == '早') {
 			event.reply({ type: 'text', text: '早啊！' });
+
+		}else if (msg == '早安' || msg == '早') {
+			event.reply({ type: 'text', text: '早啊！' });
+
+		}else if (msg == '吵' || msg == '閕嘴') {
+			event.reply({
+				type: 'image',
+				originalContentUrl: 'https://i2.kknews.cc/large/15a500031adfe76853d9',
+				previewImageUrl: 'https://i2.kknews.cc/large/15a500031adfe76853d9'
+			});
+			
 		}
 
 
