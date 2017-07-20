@@ -144,7 +144,7 @@ bot.on('message', function(event) {
 
 		}else if (msg == 'Josh好帥') {
 
-			event.reply(
+			event.reply([
 				{ type: 'text', text: '天啊~你講對了~' },
 				{ type: 'text', text: '各位大大 我要離開了' },
 				{ type: 'text', text: 'Bye Bye' },
@@ -152,7 +152,7 @@ bot.on('message', function(event) {
 					type: 'sticker',
 					packageId: '1',
 					stickerId: '408'
-				});
+				}]);
 			bot.leaveGroup('C0b2204aaa40ce799cbe70ed842749f2d');
 
 		}
