@@ -10,13 +10,14 @@ var bot = linebot({
 
 
 var msgAry1 = ['哈什麼哈','笑屁喔','不好笑ㄟ~','哈哈哈哈哈哈哈哈','怎麼這麼好笑啦','北七ㄟ','太有趣了','喔~','圖','哈'];
-var msgAry2 = ['有事嗎?','找我幹嘛?','有什麼可以為你服務的嗎?','什麼事啦~ 煩~','圖','叫屁喔~'];
+var msgAry2 = ['有事嗎?','找我幹嘛?','有什麼可以為你服務的嗎?','什麼事啦~ 煩~','圖','叫屁喔~','你沒朋友喔~ 一直找我聊天'];
 var msgAry3 = ['我怎麼會知道啦~','自己上網查啊','什麼啦~','我不會告訴你的','別問~你會怕'];
-var msgAry4 = ['嗯嗯','我也覺得','對個屁！'];
-var msgAry5 = ['你知道什麼水果最燙嗎?','你知道城市跟鄉下哪個地方的河流比較湍急嗎?','小杯奶茶想變大杯要怎麼做?','什麼雞是長在樹上的?','鉛筆姓什麼?'];
-var msgAry6 = ['不然勒~','加油好嗎~','我是BeeBee'];
-var msgAry7 = ['他是誰?','他?'];
+var msgAry4 = ['嗯嗯','我也覺得','對個屁！','OK'];
+var msgAry5 = ['你知道什麼水果最燙嗎?','你知道城市跟鄉下哪個地方的河流比較湍急嗎?','小杯奶茶想變大杯要怎麼做?','什麼雞是長在樹上的?','鉛筆姓什麼?','你才是'];
+var msgAry6 = ['不然勒~','加油好嗎~','我是BeeBee','可以'];
+var msgAry7 = ['他是誰?','他?','他怎麼了?'];
 var msgAry8 = ['中午要吃Dr. Wu嗎?','這是雷神索爾的斧頭'];
+var msgAry9 = ['我不知道ㄟ','你說什麼我聽不懂~','什麼東西','隨便','大概吧','有可能喔'];
 
 
 
@@ -53,7 +54,7 @@ bot.on('message', function(event) {
 				previewImageUrl: 'https://www.ashlieworks.com/test/josh/linebot/15a500031adfe76853d9.jpg'
 			});
 			
-		}else if (msg.indexOf('棒') != -1 || msg.indexOf('讚') != -1) {
+		}else if (msg.indexOf('棒') != -1 || msg.indexOf('讚') != -1 || msg.indexOf('真的') != -1) {
 			event.reply({
 				type: 'image',
 				originalContentUrl: 'https://www.ashlieworks.com/test/josh/linebot/15a500031ad204692d1c.jpg',
@@ -67,7 +68,7 @@ bot.on('message', function(event) {
 				previewImageUrl: 'https://www.ashlieworks.com/test/josh/linebot/d868f28ea71ec94eb9e10f2c7d173765.jpg'
 			});
 				
-		}else if (msg == '幹' || msg.indexOf('媽的') != -1) {
+		}else if (msg == '幹' || msg.indexOf('媽的') != -1 || msg.indexOf('死') != -1) {
 			event.reply({
 				type: 'image',
 				originalContentUrl: 'https://www.ashlieworks.com/test/josh/linebot/163500026d5d353c21a6.jpg',
@@ -113,14 +114,17 @@ bot.on('message', function(event) {
 			var ram = Math.floor((Math.random() * num));
 			event.reply({ type: 'text', text: msgAry4[ram] });
 
-		}else if (msg.indexOf('怒') != -1 || msg.indexOf('生氣') != -1) {
+		}else if (msg.indexOf('怒') != -1 || msg.indexOf('生氣') != -1 || msg.indexOf('火大') != -1 || msg.indexOf('可惡') != -1) {
 			event.reply({ type: 'text', text: '你再這樣我要森77囉~' });
 
 		}else if (msg.indexOf('今天') != -1) {
 			event.reply({ type: 'text', text: '你說什麼我聽不懂~' });
 
 		}else if (msg.indexOf('宅') != -1) {
-			event.reply({ type: 'text', text: 'https://news.gamme.com.tw/' },{ type: 'text', text: '衝一下pv嘛~' });
+			event.reply([{ type: 'text', text: 'https://news.gamme.com.tw/' },{ type: 'text', text: '衝一下pv嘛~' }]);
+
+		}else if (msg.indexOf('滾') != -1) {
+			event.reply({ type: 'text', text: '我偏不要 ㄌㄩㄝ..ㄌㄩㄝ..ㄌㄩㄝ' });
 
 		}else if (msg.indexOf('你') != -1) {
 			var num = msgAry5.length;
@@ -141,6 +145,14 @@ bot.on('message', function(event) {
 			var num = msgAry8.length;
 			var ram = Math.floor((Math.random() * num));
 			event.reply({ type: 'text', text: msgAry8[ram] });
+
+		}else if (msg.indexOf('有事') != -1) {
+			event.reply({ type: 'text', text: '哩來~有什麼事 好好講' });
+
+		}else if (msg.indexOf('嗎') != -1 || msg.indexOf('誰') != -1) {
+			var num = msgAry9.length;
+			var ram = Math.floor((Math.random() * num));
+			event.reply({ type: 'text', text: msgAry9[ram] });
 
 		}else if (msg == 'Josh太帥了') {
 
