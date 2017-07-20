@@ -31,24 +31,24 @@ bot.on('message', function(event) {
     var msg = event.message.text;
 
 		if (msg.indexOf('哈') != -1) {
-			var _num = Math.floor((Math.random() * 8));
-			event.reply(msgAry[_num]).then(function(data) {
-				// success 
-				console.log(msg);
-			}).catch(function(error) {
-				// error 
-				console.log('error');
-			});
+				var _num = Math.floor((Math.random() * 8));
+				event.reply(msgAry[_num]).then(function(data) {
+					// success 
+					console.log(msg);
+				}).catch(function(error) {
+					// error 
+					console.log('error');
+				});
 		}
 
 		if (msg.indexOf('XD') != -1) {
-			event.reply(msg).then(function(data) {
-				// success 
-				console.log(msg);
-			}).catch(function(error) {
-				// error 
-				console.log('error');
-			});
+				event.reply(msg).then(function(data) {
+					// success 
+					console.log(msg);
+				}).catch(function(error) {
+					// error 
+					console.log('error');
+				});
 		}
 
 		if (msg == '早安' || msg == '早') {
@@ -62,6 +62,27 @@ bot.on('message', function(event) {
 		}
 
   }//text
+
+
+
+
+	if (event.message.type == 'sticker') {
+		event.reply({
+			type: 'sticker',
+			packageId: '1',
+			stickerId: '13'
+		}).then(function(data) {
+			// success 
+			console.log(msg);
+		}).catch(function(error) {
+			// error 
+			console.log('error');
+		});
+
+	}//sticker
+
+
+
 
 
 
