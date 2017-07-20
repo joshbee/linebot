@@ -138,8 +138,12 @@ bot.on('message', function(event) {
 		}else if (msg.indexOf('滾') != -1) {
 			event.reply({ type: 'text', text: '我偏不要 ㄌㄩㄝ..ㄌㄩㄝ..ㄌㄩㄝ' });
 
-		}else if (msg.indexOf('是誰') != -1) {
-			event.reply({ type: 'text', text: '誰?' });
+		}else if (msg.indexOf('我是誰') != -1) {
+			event.source.profile().then(function (profile) {
+				event.reply('你是' + profile.displayName);
+			}).catch(function (error) {
+				// error 
+			});
 
 		}else if (msg.indexOf('你') != -1) {
 			var num = msgAry5.length;
