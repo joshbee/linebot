@@ -139,7 +139,7 @@ bot.on('message', function(event) {
 			event.reply({ type: 'text', text: '我偏不要 ㄌㄩㄝ..ㄌㄩㄝ..ㄌㄩㄝ' });
 
 		}else if (msg.indexOf('我是誰') != -1) {
-			event.source.profile().then(function (profile) {
+			bot.getUserProfile(event.source.userId).then(function (profile) {
 				event.reply('你是' + profile.displayName);
 			}).catch(function (error) {
 				// error 
