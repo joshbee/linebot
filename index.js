@@ -16,76 +16,31 @@ var msgAry = ['哈什麼哈','笑屁喔','不好笑ㄟ~','哈哈哈哈哈哈','�
 bot.on('message', function(event) {
   console.log(event); //把收到訊息的 event 印出來看看
 
-  // if (event.message.type = 'text') {
-  //   var msg = event.message.text;
-  //   event.reply(msg).then(function(data) {
-  //     // success 
-  //     console.log(msg);
-  //   }).catch(function(error) {
-  //     // error 
-  //     console.log('error');
-  //   });
-  // }
-
   if (event.message.type == 'text') {
     var msg = event.message.text;
 
 		if (msg.indexOf('哈') != -1) {
-				var _num = Math.floor((Math.random() * 8));
-				event.reply(msgAry[_num]).then(function(data) {
-					// success 
-					console.log(msg);
-				}).catch(function(error) {
-					// error 
-					console.log('error');
-				});
+				var num = msgAry.length;
+				var ram = Math.floor((Math.random() * num));
+				event.reply({ type: 'text', text: msgAry[ram] });
+
+		}else if (msg.indexOf('XD') != -1) {
+				event.reply({ type: 'text', text: msg });
+				
+		}else if (msg == '早安' || msg == '早') {
+			event.reply({ type: 'text', text: '早啊！' });
 		}
 
-		if (msg.indexOf('XD') != -1) {
-				event.reply(msg).then(function(data) {
-					// success 
-					console.log(msg);
-				}).catch(function(error) {
-					// error 
-					console.log('error');
-				});
-		}
-
-		if (msg == '早安' || msg == '早') {
-			event.reply('早啊！').then(function(data) {
-				// success 
-				console.log(msg);
-			}).catch(function(error) {
-				// error 
-				console.log('error');
-			});
-		}
-
-  }//text
 
 
-
-
-	if (event.message.type == 'sticker') {
+  }else if (event.message.type == 'sticker') {
 		event.reply({
 			type: 'sticker',
 			packageId: '1',
-			stickerId: '13'
-		}).then(function(data) {
-			// success 
-			console.log(msg);
-		}).catch(function(error) {
-			// error 
-			console.log('error');
+			stickerId: '405'
 		});
 
-	}//sticker
-
-
-
-
-
-
+	}
 
 
 });
