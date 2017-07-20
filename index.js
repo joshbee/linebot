@@ -129,6 +129,9 @@ bot.on('message', function(event) {
 		}else if (msg.indexOf('滾') != -1) {
 			event.reply({ type: 'text', text: '我偏不要 ㄌㄩㄝ..ㄌㄩㄝ..ㄌㄩㄝ' });
 
+		}else if (msg.indexOf('是誰') != -1) {
+			event.reply({ type: 'text', text: '誰?' });
+
 		}else if (msg.indexOf('你') != -1) {
 			var num = msgAry5.length;
 			var ram = Math.floor((Math.random() * num));
