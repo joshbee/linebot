@@ -120,7 +120,7 @@ bot.on('message', function(event) {
 			event.reply({ type: 'text', text: '你說什麼我聽不懂~' });
 
 		}else if (msg.indexOf('宅') != -1) {
-			event.reply({ type: 'text', text: 'https://news.gamme.com.tw/' },{ type: 'text', text: '點一下嘛~' });
+			event.reply({ type: 'text', text: 'https://news.gamme.com.tw/' },{ type: 'text', text: '衝一下pv嘛~' });
 
 		}else if (msg.indexOf('你') != -1) {
 			var num = msgAry5.length;
