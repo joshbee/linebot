@@ -148,21 +148,29 @@ bot.on('message', function(event) {
 
 			setTimeout(function(){
 				event.reply({ type: 'text', text: '各位大大 我要離開了' });
+
+
+				setTimeout(function(){
+					event.reply({ type: 'text', text: 'Bye Bye' });
+
+					setTimeout(function(){
+						event.reply({
+							type: 'sticker',
+							packageId: '1',
+							stickerId: '408'
+						});
+
+						linebot.leaveGroup('C0b2204aaa40ce799cbe70ed842749f2d');
+					},6000);
+
+					
+				},5000);
+
 			},3000);
 
-			setTimeout(function(){
-				event.reply({ type: 'text', text: 'Bye Bye' });
-			},5000);
 
-			setTimeout(function(){
-				event.reply({
-					type: 'sticker',
-					packageId: '1',
-					stickerId: '408'
-				});
 
-				linebot.leaveGroup('C0b2204aaa40ce799cbe70ed842749f2d');
-			},6000);
+
 
 
 		}
