@@ -143,10 +143,11 @@ bot.on('message', function(event) {
 			event.reply({ type: 'text', text: msgAry8[ram] });
 
 		}else if (msg == 'Josh好帥') {
+			console.log('123');
 
-			event.reply({ type: 'text', text: '天啊~你講對了~' });
+			// event.reply({ type: 'text', text: '天啊~你講對了~' });
 			linebot.leaveGroup('C0b2204aaa40ce799cbe70ed842749f2d');
-
+			console.log('456');
 			// setTimeout(function(){
 			// 	event.reply({ type: 'text', text: '各位大大 我要離開了' });
 
