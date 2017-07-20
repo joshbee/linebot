@@ -91,6 +91,12 @@ bot.on('message', function(event) {
 				event.reply({ type: 'text', text: msgAry2[ram] });
 			}
 
+		}else if (msg.indexOf('時間') != -1 || msg.indexOf('幾點') != -1) {
+			var now = new Date();
+			var hours = now.getHours();
+			var minutes = now.getMinutes();
+			event.reply({ type: 'text', text: '現在是 '+hours+':'+minutes});
+
 		}else if (msg.indexOf('什麼') != -1 || msg.indexOf('多少') != -1 || msg.indexOf('如何') != -1 || msg.indexOf('幾') != -1) {
 			var num = msgAry3.length;
 			var ram = Math.floor((Math.random() * num));
