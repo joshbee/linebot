@@ -31,8 +31,8 @@ bot.on('message', function(event) {
     var msg = event.message.text;
 
 		if (msg.indexOf('哈') != -1) {
-				var _num = Math.floor((Math.random() * 8));
-				event.reply(msgAry[_num]).then(function(data) {
+			var _num = Math.floor((Math.random() * 8));
+			event.reply(msgAry[_num]).then(function(data) {
 				// success 
 				console.log(msg);
 			}).catch(function(error) {
@@ -42,7 +42,7 @@ bot.on('message', function(event) {
 		}
 
 		if (msg.indexOf('XD') != -1) {
-				event.reply(msg).then(function(data) {
+			event.reply(msg).then(function(data) {
 				// success 
 				console.log(msg);
 			}).catch(function(error) {
