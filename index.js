@@ -67,17 +67,10 @@ bot.on('message', function(event) {
 
 
 	if (event.message.type = 'sticker') {
-		event.reply({
-			type: 'sticker',
-			packageId: '1',
-			stickerId: '13'
-		}).then(function(data) {
-			// success 
-			console.log(msg);
-		}).catch(function(error) {
-			// error 
-			console.log('error');
-		});
+		event.reply([
+			{ type: 'text', text: '我都沒有貼圖' },
+			{ type: 'text', text: '我也想要~' }
+		]);
 
 	}//sticker
 
