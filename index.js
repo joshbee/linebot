@@ -29,32 +29,57 @@ bot.on('message', function(event) {
 
   if (event.message.type = 'text') {
     var msg = event.message.text;
+
 		if (msg.indexOf('哈') != -1) {
-			var _num = Math.floor((Math.random() * 8));
-	    event.reply(msgAry[_num]).then(function(data) {
-	      // success 
-	      console.log(msg);
-	    }).catch(function(error) {
-	      // error 
-	      console.log('error');
-	    });
+				var _num = Math.floor((Math.random() * 8));
+				event.reply(msgAry[_num]).then(function(data) {
+				// success 
+				console.log(msg);
+			}).catch(function(error) {
+				// error 
+				console.log('error');
+			});
 		}
-  }
 
+		if (msg.indexOf('XD') != -1) {
+				event.reply(msg).then(function(data) {
+				// success 
+				console.log(msg);
+			}).catch(function(error) {
+				// error 
+				console.log('error');
+			});
+		}
 
-  if (event.message.type = 'text') {
-    var msg = event.message.text;
 		if (msg == '早安' || msg == '早') {
-	    event.reply('早啊！').then(function(data) {
-	      // success 
-	      console.log(msg);
-	    }).catch(function(error) {
-	      // error 
-	      console.log('error');
-	    });
+			event.reply('早啊！').then(function(data) {
+				// success 
+				console.log(msg);
+			}).catch(function(error) {
+				// error 
+				console.log('error');
+			});
 		}
-  }
 
+  }//text
+
+
+
+
+	if (event.message.type = 'sticker') {
+		event.reply({
+			type: 'sticker',
+			packageId: '1',
+			stickerId: '13'
+		}).then(function(data) {
+			// success 
+			console.log(msg);
+		}).catch(function(error) {
+			// error 
+			console.log('error');
+		});
+
+	}//sticker
 
 
 
@@ -74,6 +99,6 @@ app.post('/', linebotParser);
 
 //因為 express 預設走 port 3000，而 heroku 上預設卻不是，要透過下列程式轉換
 var server = app.listen(process.env.PORT || 8080, function() {
-  var port = server.address().port;
-  console.log("App now running on port", port);
+	var port = server.address().port;
+	console.log("App now running on port", port);
 });
