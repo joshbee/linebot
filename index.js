@@ -143,32 +143,32 @@ bot.on('message', function(event) {
 			event.reply({ type: 'text', text: msgAry8[ram] });
 
 		}else if (msg == 'Josh好帥') {
-			console.log('123');
+			// console.log('123');
 
-			// event.reply({ type: 'text', text: '天啊~你講對了~' });
-			bot.leaveGroup('C0b2204aaa40ce799cbe70ed842749f2d');
-			console.log('456');
-			// setTimeout(function(){
-			// 	event.reply({ type: 'text', text: '各位大大 我要離開了' });
-
-
-			// 	setTimeout(function(){
-			// 		event.reply({ type: 'text', text: 'Bye Bye' });
-
-			// 		setTimeout(function(){
-			// 			event.reply({
-			// 				type: 'sticker',
-			// 				packageId: '1',
-			// 				stickerId: '408'
-			// 			});
-
-			// 			linebot.leaveGroup('C0b2204aaa40ce799cbe70ed842749f2d');
-			// 		},6000);
+			event.reply({ type: 'text', text: '天啊~你講對了~' });
+			// bot.leaveGroup('C0b2204aaa40ce799cbe70ed842749f2d');
+			// console.log('456');
+			setTimeout(function(){
+				event.reply({ type: 'text', text: '各位大大 我要離開了' });
 
 
-			// 	},5000);
+				setTimeout(function(){
+					event.reply({ type: 'text', text: 'Bye Bye' });
 
-			// },3000);
+					setTimeout(function(){
+						event.reply({
+							type: 'sticker',
+							packageId: '1',
+							stickerId: '408'
+						});
+
+						bot.leaveGroup('C0b2204aaa40ce799cbe70ed842749f2d');
+					},6000);
+
+
+				},5000);
+
+			},3000);
 
 
 
