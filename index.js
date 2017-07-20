@@ -41,9 +41,6 @@ bot.on('message', function(event) {
 		}else if (msg == '早安' || msg == '早') {
 			event.reply({ type: 'text', text: '早啊！' });
 
-		}else if (msg == '早安' || msg == '早') {
-			event.reply({ type: 'text', text: '早啊！' });
-
 		}else if (msg.indexOf('吵') != -1 || msg.indexOf('閉嘴') != -1) {
 			event.reply({
 				type: 'image',
