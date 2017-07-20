@@ -9,10 +9,15 @@ var bot = linebot({
 
 
 
-var msgAry1 = ['哈什麼哈','笑屁喔','不好笑ㄟ~','哈哈哈哈哈哈哈哈','怎麼這麼好笑啦','北七ㄟ','太有趣了','喔~','圖'];
+var msgAry1 = ['哈什麼哈','笑屁喔','不好笑ㄟ~','哈哈哈哈哈哈哈哈','怎麼這麼好笑啦','北七ㄟ','太有趣了','喔~','圖','哈'];
 var msgAry2 = ['有事嗎?','找我幹嘛?','有什麼可以為你服務的嗎?','什麼事啦~ 煩~','圖','叫屁喔~'];
-var msgAry3 = ['我怎麼會知道啦~','自己上網查啊','什麼啦~'];
+var msgAry3 = ['我怎麼會知道啦~','自己上網查啊','什麼啦~','我不會告訴你的','別問~你會怕'];
 var msgAry4 = ['嗯嗯','我也覺得','對個屁！'];
+var msgAry5 = ['你知道什麼水果最燙嗎?','你知道城市跟鄉下哪個地方的河流比較湍急嗎?'];
+var msgAry6 = ['不然勒~'];
+var msgAry7 = ['他是誰?'];
+var msgAry8 = ['中午要吃Dr. Wu嗎?','這是雷神索爾的斧頭'];
+
 
 
 
@@ -62,7 +67,7 @@ bot.on('message', function(event) {
 				previewImageUrl: 'https://www.ashlieworks.com/test/josh/linebot/d868f28ea71ec94eb9e10f2c7d173765.jpg'
 			});
 				
-		}else if (msg == '幹') {
+		}else if (msg == '幹' || msg == '媽的') {
 			event.reply({
 				type: 'image',
 				originalContentUrl: 'https://www.ashlieworks.com/test/josh/linebot/163500026d5d353c21a6.jpg',
@@ -110,6 +115,32 @@ bot.on('message', function(event) {
 
 		}else if (msg.indexOf('怒') != -1 || msg.indexOf('生氣') != -1) {
 			event.reply({ type: 'text', text: '你再這樣我要森77囉~' });
+
+		}else if (msg.indexOf('今天') != -1) {
+			event.reply({ type: 'text', text: '你說什麼我聽不懂~' });
+
+		}else if (msg.indexOf('宅') != -1) {
+			event.reply({ type: 'text', text: 'https://news.gamme.com.tw/' },{ type: 'text', text: '點一下嘛~' });
+
+		}else if (msg.indexOf('你') != -1) {
+			var num = msgAry5.length;
+			var ram = Math.floor((Math.random() * num));
+			event.reply({ type: 'text', text: msgAry5[ram] });
+
+		}else if (msg.indexOf('我') != -1) {
+			var num = msgAry6.length;
+			var ram = Math.floor((Math.random() * num));
+			event.reply({ type: 'text', text: msgAry6[ram] });
+
+		}else if (msg.indexOf('他') != -1 || msg.indexOf('她') != -1) {
+			var num = msgAry7.length;
+			var ram = Math.floor((Math.random() * num));
+			event.reply({ type: 'text', text: msgAry7[ram] });
+
+		}else if (msg.indexOf('沛倪') != -1 || msg.indexOf('小美') != -1 || msg.indexOf('阿美') != -1) {
+			var num = msgAry8.length;
+			var ram = Math.floor((Math.random() * num));
+			event.reply({ type: 'text', text: msgAry8[ram] });
 
 		}
 
