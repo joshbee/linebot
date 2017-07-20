@@ -13,9 +13,9 @@ var msgAry1 = ['哈什麼哈','笑屁喔','不好笑ㄟ~','哈哈哈哈哈哈哈
 var msgAry2 = ['有事嗎?','找我幹嘛?','有什麼可以為你服務的嗎?','什麼事啦~ 煩~','圖','叫屁喔~'];
 var msgAry3 = ['我怎麼會知道啦~','自己上網查啊','什麼啦~','我不會告訴你的','別問~你會怕'];
 var msgAry4 = ['嗯嗯','我也覺得','對個屁！'];
-var msgAry5 = ['你知道什麼水果最燙嗎?','你知道城市跟鄉下哪個地方的河流比較湍急嗎?'];
-var msgAry6 = ['不然勒~','加油好嗎~'];
-var msgAry7 = ['他是誰?'];
+var msgAry5 = ['你知道什麼水果最燙嗎?','你知道城市跟鄉下哪個地方的河流比較湍急嗎?','小杯奶茶想變大杯要怎麼做?','什麼雞是長在樹上的?','鉛筆姓什麼?'];
+var msgAry6 = ['不然勒~','加油好嗎~','我是BeeBee'];
+var msgAry7 = ['他是誰?','他?'];
 var msgAry8 = ['中午要吃Dr. Wu嗎?','這是雷神索爾的斧頭'];
 
 
@@ -60,14 +60,14 @@ bot.on('message', function(event) {
 				previewImageUrl: 'https://www.ashlieworks.com/test/josh/linebot/15a500031ad204692d1c.jpg'
 			});
 				
-		}else if (msg.indexOf('笨蛋') != -1 || msg.indexOf('白痴') != -1) {
+		}else if (msg.indexOf('笨蛋') != -1 || msg.indexOf('白痴') != -1 || msg.indexOf('智障') != -1) {
 			event.reply({
 				type: 'image',
 				originalContentUrl: 'https://www.ashlieworks.com/test/josh/linebot/d868f28ea71ec94eb9e10f2c7d173765.jpg',
 				previewImageUrl: 'https://www.ashlieworks.com/test/josh/linebot/d868f28ea71ec94eb9e10f2c7d173765.jpg'
 			});
 				
-		}else if (msg == '幹' || msg == '媽的') {
+		}else if (msg == '幹' || msg.indexOf('媽的') != -1) {
 			event.reply({
 				type: 'image',
 				originalContentUrl: 'https://www.ashlieworks.com/test/josh/linebot/163500026d5d353c21a6.jpg',
@@ -142,12 +142,11 @@ bot.on('message', function(event) {
 			var ram = Math.floor((Math.random() * num));
 			event.reply({ type: 'text', text: msgAry8[ram] });
 
-		}else if (msg == 'Josh好帥') {
+		}else if (msg == 'Josh太帥了') {
 
 			event.reply([
 				{ type: 'text', text: '天啊~你講對了~' },
 				{ type: 'text', text: '各位大大 我要離開了' },
-				{ type: 'text', text: 'Bye Bye' },
 				{
 					type: 'sticker',
 					packageId: '1',
@@ -156,7 +155,6 @@ bot.on('message', function(event) {
 			bot.leaveGroup('C0b2204aaa40ce799cbe70ed842749f2d');
 
 		}
-
 
 
 
