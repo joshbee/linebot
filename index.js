@@ -174,11 +174,10 @@ bot.on('message', function(event) {
 			var ram = Math.floor((Math.random() * num));
 			event.reply({ type: 'text', text: msgAry9[ram] });
 
-		}else if (msg == 'Josh太帥了') {
+		}else if (msg == '輕輕的我將離開你') {
 
 			event.reply([
-				{ type: 'text', text: '天啊~你講對了~' },
-				{ type: 'text', text: '帥到分手 我要離開了' },
+				{ type: 'text', text: '請將眼角的淚拭去~' },
 				{
 					type: 'sticker',
 					packageId: '1',
