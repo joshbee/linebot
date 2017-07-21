@@ -44,6 +44,21 @@ bot.on('message', function(event) {
 				event.reply({ type: 'text', text: msgAry1[ram] });
 			}
 				
+		}else if (msg == '輕輕的我將離開你') {
+
+			event.reply([
+				{ type: 'text', text: '請將眼角的淚拭去~' },
+				{
+					type: 'sticker',
+					packageId: '1',
+					stickerId: '408'
+				}]).then(function(data) {
+						// success 
+						console.log(msg);
+						setTimeout(function(){bot.leaveGroup(event.source.groupId);}, 2000)
+						
+					});
+			
 		}else if (msg.indexOf('XD') != -1 || msg.indexOf('拜拜') != -1 || msg.indexOf('bye') != -1 || msg.indexOf('再見') != -1) {
 				event.reply({ type: 'text', text: msg });
 				
@@ -177,21 +192,6 @@ bot.on('message', function(event) {
 			var ram = Math.floor((Math.random() * num));
 			event.reply({ type: 'text', text: msgAry9[ram] });
 
-		}else if (msg == '輕輕的我將離開你') {
-
-			event.reply([
-				{ type: 'text', text: '請將眼角的淚拭去~' },
-				{
-					type: 'sticker',
-					packageId: '1',
-					stickerId: '408'
-				}]).then(function(data) {
-						// success 
-						console.log(msg);
-						setTimeout(function(){bot.leaveGroup(event.source.groupId);}, 2000)
-						
-					});
-			
 		}
 
 
