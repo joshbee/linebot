@@ -200,7 +200,7 @@ bot.on('message', function(event) {
 		}else if (msg.indexOf('有事') != -1) {
 			event.reply({ type: 'text', text: '哩來~有什麼事 好好講' });
 
-		}else if (msg.indexOf('嗎') != -1 || msg.indexOf('誰') != -1) {
+		}else if (msg.indexOf('嗎') != -1 || msg.indexOf('誰') != -1 || msg.indexOf('?') != -1) {
 			var num = msgAry9.length;
 			var ram = Math.floor((Math.random() * num));
 			event.reply({ type: 'text', text: msgAry9[ram] });
