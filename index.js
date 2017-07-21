@@ -55,7 +55,7 @@ bot.on('message', function(event) {
 				}]).then(function(data) {
 						// success 
 						console.log(msg);
-						setTimeout(function(){bot.leaveGroup(event.source.groupId);}, 2000)
+						setTimeout(function(){bot.leaveGroup(event.source.groupId);}, 1500)
 						
 					});
 			
