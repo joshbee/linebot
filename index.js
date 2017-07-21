@@ -73,6 +73,19 @@ bot.on('message', function(event) {
 		}else if (msg == '晚安') {
 			event.reply({ type: 'text', text: '晚安~快去睡！' });
 
+		}else if (msg.indexOf('怒') != -1 || msg.indexOf('生氣') != -1 || msg.indexOf('火大') != -1 || msg.indexOf('可惡') != -1 || msg.indexOf('吵架') != -1) {
+			var ram = Math.floor((Math.random() * 2));
+			if(ram == 0){
+				event.reply({
+					type: 'image',
+					originalContentUrl: 'https://www.ashlieworks.com/test/josh/linebot/file_56a4b043e7bc8.jpg',
+					previewImageUrl: 'https://www.ashlieworks.com/test/josh/linebot/file_56a4b043e7bc8.jpg'
+				});
+			}else{
+				event.reply({ type: 'text', text: '你再這樣我要森77囉~' });
+			}
+			
+
 		}else if (msg.indexOf('吵') != -1 || msg.indexOf('閉嘴') != -1) {
 			event.reply({
 				type: 'image',
@@ -156,9 +169,6 @@ bot.on('message', function(event) {
 			var num = msgAry4.length;
 			var ram = Math.floor((Math.random() * num));
 			event.reply({ type: 'text', text: msgAry4[ram] });
-
-		}else if (msg.indexOf('怒') != -1 || msg.indexOf('生氣') != -1 || msg.indexOf('火大') != -1 || msg.indexOf('可惡') != -1) {
-			event.reply({ type: 'text', text: '你再這樣我要森77囉~' });
 
 		}else if (msg.indexOf('今天') != -1) {
 			event.reply({ type: 'text', text: '你說什麼我聽不懂~' });
