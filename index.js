@@ -17,7 +17,8 @@ var msgAry5 = ['你知道城市跟鄉下哪個地方的河流比較湍急嗎?','
 var msgAry6 = ['不然勒~','加油好嗎~','我是BeeBee','可以'];
 var msgAry7 = ['他是誰?','他?','他怎麼了?'];
 var msgAry8 = ['中午要吃Dr. Wu嗎?','這是雷神索爾的斧頭'];
-var msgAry9 = ['我不知道ㄟ','你說什麼我聽不懂~','什麼東西','隨便','大概吧','有可能喔'];
+var msgAry9 = ['我不知道ㄟ','你說什麼我聽不懂~','什麼東西','隨便','大概吧','有可能喔','你說呢?'];
+var msgAry10 = ['想吃什麼就吃什麼啊','吃吃的愛','吃屎','吃便當好了','不要吃減肥'];
 
 var stickPack = ['1','2'];
 var stickID = [['3','5','16','21','135','139','405','428'],['18','24','149','170','177','179','502','520']];
@@ -31,7 +32,7 @@ bot.on('message', function(event) {
   if (event.message.type == 'text') {
     var msg = event.message.text;
 
-		if (msg.indexOf('哈') != -1 || msg.indexOf('呵') != -1) {
+		if (msg.indexOf('哈') != -1 || msg.indexOf('呵') != -1 || msg.indexOf('笑') != -1) {
 			var num = msgAry1.length;
 			var ram = Math.floor((Math.random() * num));
 			if(ram == 8){
@@ -122,6 +123,14 @@ bot.on('message', function(event) {
 			var minutes = now.getMinutes();
 			event.reply({ type: 'text', text: '現在是 '+hours+':'+minutes});
 
+		}else if (msg.indexOf('吃屎') != -1) {
+			event.reply({ type: 'text', text: '你自己慢慢吃~' });
+
+		}else if (msg.indexOf('吃') != -1) {
+			var num = msgAry10.length;
+			var ram = Math.floor((Math.random() * num));
+			event.reply({ type: 'text', text: msgAry10[ram] });
+
 		}else if (msg.indexOf('什麼') != -1 || msg.indexOf('多少') != -1 || msg.indexOf('如何') != -1 || msg.indexOf('幾') != -1) {
 			var num = msgAry3.length;
 			var ram = Math.floor((Math.random() * num));
@@ -168,6 +177,14 @@ bot.on('message', function(event) {
 				// error 
 			});
 
+		}else if (msg.indexOf('有事') != -1) {
+			event.reply({ type: 'text', text: '哩來~有什麼事 好好講' });
+
+		}else if (msg.indexOf('嗎') != -1 || msg.indexOf('誰') != -1) {
+			var num = msgAry9.length;
+			var ram = Math.floor((Math.random() * num));
+			event.reply({ type: 'text', text: msgAry9[ram] });
+
 		}else if (msg.indexOf('你') != -1) {
 			var num = msgAry5.length;
 			var ram = Math.floor((Math.random() * num));
@@ -187,14 +204,6 @@ bot.on('message', function(event) {
 			var num = msgAry8.length;
 			var ram = Math.floor((Math.random() * num));
 			event.reply({ type: 'text', text: msgAry8[ram] });
-
-		}else if (msg.indexOf('有事') != -1) {
-			event.reply({ type: 'text', text: '哩來~有什麼事 好好講' });
-
-		}else if (msg.indexOf('嗎') != -1 || msg.indexOf('誰') != -1) {
-			var num = msgAry9.length;
-			var ram = Math.floor((Math.random() * num));
-			event.reply({ type: 'text', text: msgAry9[ram] });
 
 		}
 
