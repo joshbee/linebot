@@ -50,6 +50,9 @@ bot.on('message', function(event) {
 		}else if (msg == '早安' || msg == '早') {
 			event.reply({ type: 'text', text: '早啊！' });
 
+		}else if (msg == '晚安') {
+			event.reply({ type: 'text', text: '晚安~快去睡！' });
+
 		}else if (msg.indexOf('吵') != -1 || msg.indexOf('閉嘴') != -1) {
 			event.reply({
 				type: 'image',
@@ -136,7 +139,7 @@ bot.on('message', function(event) {
 			event.reply([{ type: 'text', text: 'https://news.gamme.com.tw/' },{ type: 'text', text: '衝一下pv嘛~' }]);
 
 		}else if (msg.indexOf('滾') != -1) {
-			event.reply({ type: 'text', text: '我偏不要 ㄌㄩㄝ..ㄌㄩㄝ..ㄌㄩㄝ' });
+			event.reply({ type: 'text', text: '偏不要 ㄌㄩㄝ..ㄌㄩㄝ..ㄌㄩㄝ' });
 
 		}else if (msg.indexOf('我是誰') != -1) {
 			bot.getUserProfile(event.source.userId).then(function (profile) {
