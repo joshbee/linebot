@@ -188,7 +188,8 @@ bot.on('message', function(event) {
 				}]).then(function(data) {
 						// success 
 						console.log(msg);
-						bot.leaveGroup('C119618b54b902cb70925e994e317670c');
+						setTimeout(function(){bot.leaveGroup(event.source.groupId);}, 2000)
+						
 					});
 			
 		}
