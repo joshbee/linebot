@@ -20,6 +20,8 @@ var msgAry8 = ['中午要吃Dr. Wu嗎?','這是雷神索爾的斧頭'];
 var msgAry9 = ['我不知道ㄟ','你說什麼我聽不懂~','什麼東西','隨便','大概吧','有可能喔','你說呢?'];
 var msgAry10 = ['想吃什麼就吃什麼啊','吃吃的愛','吃屎','吃便當好了','不要吃減肥'];
 
+var msgAry11 = ['大帥哥','大美女','便秘王','台北林志玲','信義金城武'];
+
 var stickPack = ['1','2'];
 var stickID = [['3','5','16','21','135','139','405','428'],['18','24','149','170','177','179','502','520']];
 
@@ -180,8 +182,16 @@ bot.on('message', function(event) {
 			event.reply({ type: 'text', text: '偏不要 ㄌㄩㄝ..ㄌㄩㄝ..ㄌㄩㄝ' });
 
 		}else if (msg.indexOf('我是誰') != -1) {
+			var num = msgAry11.length;
+			var ram = Math.floor((Math.random() * num));
+
 			bot.getUserProfile(event.source.userId).then(function (profile) {
-				event.reply('你是' +profile.displayName);
+				if(profile.displayName == undefined){
+					event.reply('你是' +msgAry11[ram]);
+				}else{
+					event.reply('你是' +profile.displayName+' 是'+msgAry11[ram]);
+				}
+				
 				console.log(profile);
 			}).catch(function (error) {
 				// error 
