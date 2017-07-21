@@ -63,7 +63,13 @@ bot.on('message', function(event) {
 				event.reply({ type: 'text', text: msg });
 				
 		}else if (msg == '早安' || msg == '早') {
-			event.reply({ type: 'text', text: '早啊！' });
+			event.reply({ type: 'text', text: '早啊！' }).then(function(data){
+				event.reply({
+					type: 'image',
+					originalContentUrl: 'https://www.ashlieworks.com/test/josh/linebot/14440999_301754200179927_9162454555288991313_n.jpg',
+					previewImageUrl: 'https://www.ashlieworks.com/test/josh/linebot/14440999_301754200179927_9162454555288991313_n.jpg'
+				});
+			});
 
 		}else if (msg == '晚安') {
 			event.reply({ type: 'text', text: '晚安~快去睡！' });
